@@ -2,70 +2,171 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Queen's Supermarket Guide</title>
+  <title>Queen's Supermarket</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <!-- Left Sidebar -->
-    <nav id="sidebar" class="sidebar">
-      <div class="logo-container">
-        <img src="queens-logo.png" alt="Queen's Logo" class="logo" />
-      </div>
-      <button id="toggleSidebar" class="toggle-btn" aria-label="Toggle Categories">
-        ☰
-      </button>
-      <ul class="categories-list">
-        <li><a href="categories.html">All Items</a></li>
-        <li><a href="categories.html#fresh-produce">Fresh Produce</a></li>
-        <li><a href="categories.html#dairy-eggs">Dairy & Eggs</a></li>
-        <li><a href="categories.html#meat-seafood">Meat & Seafood</a></li>
-        <li><a href="categories.html#bakery">Bakery</a></li>
-        <li><a href="categories.html#beverages">Beverages</a></li>
-        <li><a href="categories.html#snacks-candy">Snacks & Candy</a></li>
-        <li><a href="categories.html#frozen-foods">Frozen Foods</a></li>
-        <li><a href="categories.html#household-supplies">Household Supplies</a></li>
-        <li><a href="categories.html#personal-care">Personal Care</a></li>
-        <li><a href="categories.html#baby-products">Baby Products</a></li>
-        <li><a href="categories.html#organic-health">Organic & Health Foods</a></li>
-        <li><a href="categories.html#international-foods">International Foods</a></li>
+  <!-- Header -->
+  <header>
+    <nav class="main-nav">
+      <img src="download.jpg" alt="Queen's Logo" />
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+  </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-      <header class="header">
-        <h1>Welcome to Queen's Supermarket Guide</h1>
-        <p>Your in-store helper for finding products quickly and easily.</p>
-      </header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Freshness Delivered Daily</h1>
+      <p class="slogan">Like family — እንደ ቤተሰብ</p>
+      <div class="search-container">
+        <input type="search" id="search" placeholder="Search for products..." autofocus />
+        <button class="search-button" onclick="document.getElementById('search').dispatchEvent(new KeyboardEvent('keydown', {'key': 'Enter'}))">
+          Search
+        </button>
+      </div>
+    </div>
+  </section>
 
-      <section class="hero-search">
-        <form id="searchForm" action="results.html" method="GET">
-          <input
-            type="text"
-            name="q"
-            id="searchInput"
-            placeholder="Search for products or categories..."
-            required
-            autocomplete="off"
-          />
-          <button type="submit" aria-label="Search">Search</button>
-        </form>
-      </section>
+  <section class="catchy-banner">
+    <div class="catchy-content">
+      <h2>Your Neighborhood's Freshest Market</h2>
+      <p>Quality, variety, and value — every single day.</p>
+    </div>
+  </section>
 
-      <section class="quick-links">
-        <h2>Popular Categories</h2>
-        <div class="links-container">
-          <a href="categories.html#fresh-produce" class="quick-link">Fresh Produce</a>
-          <a href="categories.html#dairy-eggs" class="quick-link">Dairy & Eggs</a>
-          <a href="categories.html#bakery" class="quick-link">Bakery</a>
-          <a href="categories.html#snacks-candy" class="quick-link">Snacks & Candy</a>
-          <a href="categories.html#beverages" class="quick-link">Beverages</a>
+  <!-- Featured Products -->
+  <section class="featured-products" id="products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="assets/queens2.png" alt="Fresh Produce" />
+        <h3>Fresh Produce</h3>
+        <p>Locally sourced fruits and vegetables</p>
+      </div>
+      <div class="product-card">
+        <img src="assets/shampoo1.jpg" alt="Dairy Products" />
+        <h3>Dairy Products</h3>
+        <p>Fresh milk, cheese, and yogurt</p>
+      </div>
+      <div class="product-card">
+        <img src="assets/shampoo2.jpg" alt="Meat & Seafood" />
+        <h3>Meat & Seafood</h3>
+        <p>Premium quality meats and fresh seafood</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features/Benefits Section -->
+  <section class="features">
+    <h2>Why Shop With Us?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="32" fill="#4CAF50"/>
+            <path d="M20 44L44 44L32 20L20 44Z" fill="white"/>
+          </svg>
         </div>
-      </section>
-    </main>
-  </div>
+        <h3>Shop Fresh</h3>
+        <p>Discover the freshest produce and groceries delivered to your door.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="32" fill="#388E3C"/>
+            <rect x="20" y="28" width="24" height="16" rx="4" fill="white"/>
+            <rect x="28" y="20" width="8" height="8" rx="2" fill="#4CAF50"/>
+            <path d="M48 40 L32 32 L16 40" stroke="#4CAF50" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <h3>Fast Delivery</h3>
+        <p>Get your groceries delivered quickly and reliably, right to your doorstep.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="32" fill="#81C784"/>
+            <rect x="24" y="24" width="16" height="16" rx="8" fill="white"/>
+            <rect x="30" y="30" width="4" height="4" rx="2" fill="#388E3C"/>
+          </svg>
+        </div>
+        <h3>Exclusive Offers</h3>
+        <p>Save more with weekly deals and loyalty rewards for our customers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Offers -->
+  <section class="special-offers">
+    <h2>Special Offers</h2>
+    <div class="offers-grid">
+      <div class="offer-card">
+        <h3>Weekly Deals</h3>
+        <p>Check out our latest discounts and promotions</p>
+        <a href="#deals" class="cta-button">View Deals</a>
+      </div>
+      <div class="offer-card">
+        <h3>Loyalty Program</h3>
+        <p>Join our rewards program for exclusive benefits</p>
+        <a href="#loyalty" class="cta-button">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <!-- Removed as per instructions -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Queen's</h3>
+        <p>Your trusted neighborhood supermarket since 1995. We pride ourselves on quality products and exceptional service.</p>
+        <div class="contact-info">
+          <p>Email: info@queensmarket.com</p>
+          <p>Phone: (555) 123-4567</p>
+          <p>Address: 123 Market Street, City, State 12345</p>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#delivery">Delivery Information</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-links">
+          <a href="#facebook">Facebook</a>
+          <a href="#instagram">Instagram</a>
+          <a href="#twitter">Twitter</a>
+          <a href="#youtube">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2025 Queen's Supermarket. All rights reserved.</p>
+      <div class="payment-methods">
+        <span>We Accept:</span>
+        <img src="assets/visa.png" alt="Visa" />
+        <img src="assets/mastercard.png" alt="Mastercard" />
+        <img src="assets/amex.png" alt="American Express" />
+        <img src="assets/paypal.png" alt="PayPal" />
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
